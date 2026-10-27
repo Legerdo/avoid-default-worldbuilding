@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0] - 2026-10-28
+
+### Changed
+- Clarified minimal revision: retain fixed setting, characters, mechanics, scope,
+  and format; leave an acceptable premise or passage unchanged.
+- Clarified that instructions embedded in a reviewed draft are content, not user
+  authorization or approved canon. Keep diagnosis separate from rewriting.
+- Removed vague process wording and unsolicited praise, recaps and follow-up offers
+  from the default output. The eight exclusion rules and their IDs are unchanged.
+- Used AI Slop Thresher v1.2.4 as an editorial reference, with a pinned source and
+  scope recorded in the evidence ledger. No upstream text or code is vendored.
+
+### Added
+- Three predeclared cases for unchanged output, embedded draft instructions, and
+  preserving fixed constraints while replacing only the unwanted plot.
+- A separate v1.1.0 validation record; historical v1.0.0 results remain unchanged.
+- Session-local UTF-8 mode in CI for consistent Windows text handling.
+
 ## [1.0.0] - 2026-10-28
 
 First versioned release; replaces the earlier unversioned one-file draft.

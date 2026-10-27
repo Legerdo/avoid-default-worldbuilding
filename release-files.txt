@@ -23,3 +23,7 @@ tests/test_repository.py
 evals/observations/smoke-2026-10-28.json
 validation/static-linux.txt
 validation/official-windows.txt
+validation/v1.1.0.md
+validation/static-windows-v1.1.0.txt
+validation/official-windows-v1.1.0.txt
+evals/observations/smoke-v1.1.0-2026-10-28.json

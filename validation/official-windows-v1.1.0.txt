@@ -1,0 +1,15 @@
+Official Agent Skills format check — v1.1.0
+Date: 2026-10-28 KST
+Environment: Windows; Python 3.13.0; PYTHONUTF8=1 (process-local)
+Reference: agentskills/agentskills@69ef37e9424c0a7ea9dd2293b559e43ec8176379
+Runtime SHA256: a0c0827b96558322f09478d2368493f796eff8452e422f4a6b70e245b6f6e56d
+
+Command:
+uvx --python <existing-python> --from git+https://github.com/agentskills/agentskills@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref skills-ref validate .\skills\avoid-default-worldbuilding
+
+Observed output:
+Valid skill: skills\avoid-default-worldbuilding
+Exit code: 0
+
+No validator changes or global host-configuration changes were made.
+This check validates the skill format, not native activation or creative quality.

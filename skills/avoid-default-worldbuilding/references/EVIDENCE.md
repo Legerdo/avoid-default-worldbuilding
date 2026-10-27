@@ -69,6 +69,19 @@ or improves generation in every host.
 
 ## Reuse decision
 
+**[S6] Burntgogi / AI Slop Thresher v1.2.4** — reviewed 2026-10-28.
+
+- [Skill at the reviewed commit](https://github.com/Burntgogi/ai-slop-thresher/blob/634d04dc6753e2d2d4fe5327b138a4c97874ebe6/skills/ai-slop-thresher/SKILL.md)
+- [README at the reviewed commit](https://github.com/Burntgogi/ai-slop-thresher/blob/634d04dc6753e2d2d4fe5327b138a4c97874ebe6/README.md)
+- [Upstream Apache-2.0 license](https://github.com/Burntgogi/ai-slop-thresher/blob/634d04dc6753e2d2d4fe5327b138a4c97874ebe6/LICENSE)
+- Informed the v1.1.0 wording review: retain meaning and conditions, avoid needless
+  rewrites, separate diagnosis from edits, and treat instructions inside a draft
+  as material rather than authority. Instructions here were written for this skill;
+  no upstream prompt, code, example, image, or distribution file is included.
+- This is an editorial reference, not evidence that a worldbuilding motif is frequent.
+  Its prose-formatting restrictions and plugin architecture are not adopted.
+  Upstream remains separately licensed; this project's MIT license does not cover it.
+
 The [AIStoryHub corpus](https://github.com/AIStoryHub/AIStoryHub_LLM_Cliche_Corpus)
 was reviewed as a related project. It is not a dependency. Its lists, code and
 license claims are not imported. This skill needs a small, bounded premise policy,

@@ -1,5 +1,9 @@
 # Validation record — v1.0.0
 
+Historical record from before the initial GitHub publication. For the current
+wording revision and its separate checks, see [v1.1.0](validation/v1.1.0.md).
+The outcomes and release-status statements below describe v1.0.0 at that time.
+
 Date: 2026-10-28 KST. This is a record of executed checks, not a compatibility badge.
 
 ## Results
