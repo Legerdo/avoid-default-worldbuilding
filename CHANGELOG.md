@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.2.0] - 2026-10-28
+
+### Changed
+- Based on narrative/setting research, check the causal action-to-consequence
+  arc and its resolution, not just named jobs, scenery or genre reskins.
+- For open game concepts, relate a distinctive environmental feature to a
+  player action, resource or constraint. Preserve atmosphere-only requests
+  and fixed gameplay exactly; this is an editorial heuristic, not a proven
+  intervention from the cited literary studies.
+- Preserve multiple requested concepts while avoiding mere plot reskins;
+  do not require generating several candidates for a single requested idea.
+
+### Added
+- WB09 narrowly excludes an **unrequested** return-home + revived festival /
+  tradition + automatic community reconciliation arc. Individual hometown,
+  festival, tradition or harmonious ending motifs remain allowed.
+- Five additional paper discussions in the evidence ledger, including exact
+  sample/method/model limits, and six precommitted boundary cases (32 -> 38).
+- Separate versioned validation record. Existing static tests and prior
+  observations are not rewritten to make this release pass.
+
 ## [1.1.0] - 2026-10-28
 
 ### Changed

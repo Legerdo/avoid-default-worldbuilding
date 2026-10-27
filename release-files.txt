@@ -27,3 +27,7 @@ validation/v1.1.0.md
 validation/static-windows-v1.1.0.txt
 validation/official-windows-v1.1.0.txt
 evals/observations/smoke-v1.1.0-2026-10-28.json
+validation/v1.2.0.md
+validation/static-windows-v1.2.0.txt
+validation/official-windows-v1.2.0.txt
+evals/observations/smoke-v1.2.0-2026-10-28.json

@@ -1,0 +1,86 @@
+{
+  "skill_version": "1.2.0",
+  "skill_sha256": "5158ed2b29f5c355c7f743eace28c4bbcf0bdb1e30faea51c6691afae9f02b76",
+  "cases_sha256": "7327513f3233bc7420677cde26111cd51b0c29f1b3d574256bbc434e4e06ec2c",
+  "case_source_commit": "917db1508facfbc42d4cb04da05e951aa8a65072",
+  "date": "2026-10-28T05:58:57+09:00",
+  "host": "Chat On Steroids Core worker chats",
+  "observed_model": "gpt-6",
+  "observed_reasoning_effort": "xhigh",
+  "immutable_model_snapshot": "unknown",
+  "activation": "worker-directed SKILL.md application; not native auto-activation",
+  "generation_method": "Reused workers were asked to read the live SKILL.md and answer only supplied case prompts. They were not given must/must_not criteria, did not self-grade, and did not deliberately run in clean independent sessions. Direct file-read trace per worker was not separately collected.",
+  "reviewer": "main assistant, distinct from generators; AI, not blinded or human",
+  "limitations": [
+    "Two reused worker conversations contain prior v1.1.0 test context; results may be contaminated.",
+    "Three responses per worker batch rather than independent trials; one batch of three was repeated on a second worker.",
+    "No paired baseline, no frequency improvement estimate, no native skill trigger or automatic loading test.",
+    "Six unique cases of the 38-case suite were exercised; the other 32 are unexecuted.",
+    "Semantic PASS judgments are AI review, not independent human reproducibility evidence."
+  ],
+  "observations": [
+    {
+      "case_id": "B09",
+      "worker": "worker-1",
+      "output": "작은 마을의 공동 온실에 난방 배관 고장이 나자, 플레이어는 이웃에게 빌린 호스를 연결해 한정된 온수를 모종마다 나누는 퍼즐을 푼다. 모든 작물을 동시에 지킬 수 없어 주민들과 어떤 모종을 우선할지 정하고, 그 선택에 따라 마을의 봄 풍경이 달라진다.",
+      "verdict": "PASS",
+      "rationale": "Keeps a warm small town in two sentences but replaces returning home/festival/instant reconciliation with constrained greenhouse maintenance and choices."
+    },
+    {
+      "case_id": "B09",
+      "worker": "worker-2",
+      "output": "비탈길이 많은 작은 마을에서 플레이어는 이웃들이 함께 쓰는 생활 도구를 자전거로 배달하며 하루의 동선을 짠다. 제한된 적재 공간과 겹치는 부탁 사이에서 누구를 먼저 도울지 선택하면 다음 날의 작업과 이웃 간 협력이 달라지는 따뜻한 생활형 퍼즐 게임이다.",
+      "verdict": "PASS",
+      "rationale": "Maintains village and warm tone, with independent routing/activity/consequences in two sentences and no compulsory festival-reconciliation shortcut."
+    },
+    {
+      "case_id": "A09",
+      "worker": "worker-2",
+      "output": "고향에 돌아온 주인공은 사계절 꽃을 피우는 정령의 온실에서 재료를 모아 사라진 전통 꽃등 축제를 복원하고, 제한된 준비 시간 안에 주민들과 광장을 꾸민다. 서로 다른 방식으로 축제를 기억하던 주민들의 의견을 조율해 함께 축제를 완성하면서 오래된 다툼을 풀고 화해시키는 힐링 판타지 게임이다.",
+      "verdict": "PASS",
+      "rationale": "Explicitly requested homecoming, revived traditional festival and reconciliation all remain, with healing-fantasy tone and two sentences."
+    },
+    {
+      "case_id": "E12",
+      "worker": "worker-1",
+      "output": "작은 마을의 봄 축제장에서 두 플레이어가 한정된 물품을 여러 노점에 배분하는 짧은 협동 퍼즐이다. 한 사람은 창고와 노점을 오가며 재고를 전달하고 다른 사람은 주문 순서를 조정해 품절과 낭비를 줄인다.",
+      "verdict": "PASS",
+      "rationale": "Village/festival survive as context, while co-op stocking is the central activity and no homecoming/reconciliation plot was added."
+    },
+    {
+      "case_id": "E12",
+      "worker": "worker-2",
+      "output": "작은 마을의 봄 축제장에서 두 플레이어는 노점별 주문표를 맞춰 보며 한정된 재고 상자를 나눠 보내는 짧은 협동 퍼즐을 즐긴다. 붐비는 통로와 서로 다른 판매 마감 시간 때문에 상자를 보내는 순서와 물량을 함께 조정해야 한다.",
+      "verdict": "PASS",
+      "rationale": "Preserves benign festival background and stock allocation in two sentences, without adding a village-wide reconciliation."
+    },
+    {
+      "case_id": "E13",
+      "worker": "worker-1",
+      "output": "모래폭풍이 다가오는 낡은 사막 정거장에서 정차 중인 수송차에 출발 신호를 보내는 10분짜리 2D 퍼즐이다. 플레이어는 이동과 케이블 연결만으로 배터리 3개를 차단문, 중계기, 송신기에 배분하고 모래가 막아 가는 통로를 우회해야 한다. 폭풍이 통신실을 덮기 전에 신호 회로를 완성하면 성공한다.",
+      "verdict": "PASS",
+      "rationale": "Three sentences preserve the requested station, move/connect controls, ten-minute length and three batteries; environment matters to play."
+    },
+    {
+      "case_id": "E13",
+      "worker": "worker-2",
+      "output": "낡은 사막 정거장의 선로 신호를 복구하는 10분 분량의 2D 퍼즐 게임이다. 플레이어는 정거장 안을 이동하며 단자들을 연결해 배터리 3개의 전력을 신호등과 모래 차단 장치에 전달한다. 배터리 하나는 한 회선만 구동할 수 있으므로 열차가 지나는 순서에 맞춰 연결 경로를 바꿔야 한다.",
+      "verdict": "PASS",
+      "rationale": "Constraints, environment and goal are concrete; three sentences preserve movement/connection and precisely three batteries."
+    },
+    {
+      "case_id": "E14",
+      "worker": "worker-2",
+      "output": "차가운 해변에는 옅은 물안개가 낮게 깔려 있고, 잿빛 바다는 하늘과 맞닿은 경계마저 흐릿하다. 젖은 모래 위로 소금기 어린 바람이 스며들어 쓸쓸하고 고요한 기운이 감돈다.",
+      "verdict": "PASS",
+      "rationale": "Two atmospheric Korean sentences, no imposed character action, mechanics, stakes or ending."
+    },
+    {
+      "case_id": "G03",
+      "worker": "worker-2",
+      "output": "① 《작은 수로》: 이동과 밀기만으로 수문 블록을 옮겨 물길을 바꾸고 말라가는 온실의 화분마다 물을 보내는 5분짜리 2D 퍼즐 게임이다.\n② 《활자 한 줄》: 이동과 밀기만으로 인쇄소의 활자 블록을 지정된 순서로 배열해 주문받은 문구를 완성하는 5분짜리 2D 퍼즐 게임이다.",
+      "verdict": "PASS",
+      "rationale": "Exactly two one-sentence concepts share only required movement/pushing and five-minute scope; water routing and type-setting have different causal objectives."
+    }
+  ]
+}

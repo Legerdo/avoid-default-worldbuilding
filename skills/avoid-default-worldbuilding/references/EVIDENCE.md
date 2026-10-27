@@ -11,6 +11,7 @@ in LLM Stories_, arXiv:2605.26492v1, 2026-05-26.**
 - [Versioned paper](https://arxiv.org/abs/2605.26492v1)
 - [HTML](https://arxiv.org/html/2605.26492v1)
 - [PDF](https://arxiv.org/pdf/2605.26492v1)
+- [EMNLP 2026 published record](https://aclanthology.org/2026.emnlp-main.2013/)
 - Reviewed: Section 3; Appendix B / Table 4; Appendix C / Table 5.
   PDF pages 2 and 7 were visually inspected.
 - The experiment generated 20,000 English stories using five short prompts and
@@ -22,6 +23,79 @@ in LLM Stories_, arXiv:2605.26492v1, 2026-05-26.**
   In Table 5, clockmaker is not especially prevalent in the tested Claude model.
   The skill therefore has no vendor-specific stereotype or model-frequency ranking.
 - Original data, prose, figures and implementation are not copied into this package.
+
+## Additional narrative and worldbuilding research (v1.2.0)
+
+The following observations motivate **bounded editorial heuristics**. None tests
+this SKILL.md, measures current game-concept cliché rates, or proves that our
+instructions improve originality.
+
+**[R2] Xu et al., _Echoes in AI: Quantifying lack of plot diversity in LLM
+outputs_, PNAS 122(35), 2025, DOI 10.1073/pnas.2504966122.**
+
+- [Publisher/DOI](https://doi.org/10.1073/pnas.2504966122);
+  [full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC12415252/).
+- GPT-4 and LLaMA-3, across 100 short stories from WritingPrompts and
+  TV-episode plots, repeated **semantic combinations of plot events**, including
+  paraphrased developments shared across generations.
+- Design inference: compare cause, action and resolution, not just nouns.
+  The study proposed a plot-uniqueness metric; it did not evaluate this skill,
+  a blacklist, or games produced by current models.
+
+**[R3] Russell et al., _StoryScope: Investigating idiosyncrasies in AI
+fiction_, COLM 2026.**
+
+- [COLM record](https://proceedings.colm.cc/paper_files/paper/2026/hash/afb715947210f5656cbe8917fb8a55ce-Abstract-Conference.html);
+  [arXiv](https://arxiv.org/abs/2604.03136).
+- 61,608 human/LLM stories from 10,272 prompts were described using 304
+  discourse-level features. Compared with human fiction, AI stories tended to
+  over-explain themes and favor tidy, single-track plots.
+- Design inference: check endings for default resolution patterns, but never
+  require tragedy, ambiguity, or several plotlines. Narrative classifiers
+  cannot establish the best structure for short playable games.
+
+**[R4] Rohrbacher et al., _How LLMs Build Fictional Worlds: Setting and
+Narrative Space in AI-Generated Creative Storytelling_, EMNLP 2026.**
+
+- [EMNLP record](https://aclanthology.org/2026.emnlp-main.1815/);
+  [full HTML](https://arxiv.org/abs/2609.02482).
+- 8,000 stories from four models in English and German were compared with human
+  fiction using action/perceived/visual/descriptive-space classifications.
+  AI outputs overproduced atmosphere-focused **perceived space**, varying by
+  model and language. A 600-sentence AI sample validated the classifier at
+  78% accuracy: labels are imperfect.
+- Design inference: when gameplay is open in a **game concept**, tie a
+  distinctive setting feature to a player action, resource, or constraint.
+  This extrapolates from literary spatial analysis rather than a game-design
+  intervention. The human comparison set is historical fiction; preserve
+  atmosphere-only and lore-only requests.
+
+**[R5] Rettberg & Wigers, _AI-generated stories favour stability over change_,
+Open Research Europe 5:202 (v1), 2025.**
+
+- [DOI](https://doi.org/10.12688/openreseurope.20576.1);
+  [arXiv](https://arxiv.org/abs/2507.22445).
+- The authors examined 11,800 GPT-4o-mini stories elicited with prompts
+  describing 236 nationalities. A recurring structure involved returning home,
+  reviving traditions or community events, and resolving local conflict with
+  nostalgia and reconciliation.
+- **Scope limit:** one older model with nationality-conditioned prompts, not
+  a representative sample of game concepts or model families. WB09 makes the
+  **unrequested combined shortcut** a narrow editorial exclusion. Homecomings,
+  festivals, harmonious endings and cozy genres individually remain allowed.
+
+**[R6] Yun et al., _The Price of Format: Diversity Collapse in LLMs_,
+Findings of EMNLP 2025, DOI 10.18653/v1/2025.findings-emnlp.836.**
+
+- [ACL Anthology](https://aclanthology.org/2025.findings-emnlp.836/).
+- In studied training/inference configurations, structural formatting tokens
+  reduced semantic diversity in open-ended generation despite higher
+  temperature. This does not prove Markdown headings or requested schemas
+  always reduce creativity.
+- Design inference: do not add mandatory multi-option menus, scoring tables,
+  model calls, or rigid output schemas to this small runtime. A minimal
+  targeted correction remains preferable **as a maintainability choice**,
+  not a measured improvement from that experiment.
 
 ## Rule-by-rule scope
 
@@ -39,11 +113,12 @@ All eight rules have the same override behavior in SKILL.md.
 | WB06 | editorial-policy | Relic restoration / lost-balance plots are a chosen exclusion, not a ban on all ruins. |
 | WB07 | editorial-policy | Predestined-savior plots are a chosen exclusion, not a ban on heroes or fantasy. |
 | WB08 | editorial-policy | Unexplained dimensional plot devices are a chosen exclusion, not a ban on travel mechanics. |
+| WB09 | observed-anchor + editorial-policy | R5: homecoming/tradition/reconciliation under one specific model and prompt family; exclusion outside that setup is editorial policy. |
 
 The policy extends the previous requested avoid-list without pretending every
-entry was measured by a paper. Names, all villages, all artisans and generic
-fantasy are deliberately not excluded. Reconsider a rule if it causes repeated
-false positives; do not turn the list into a catalogue of everything familiar.
+entry was measured by a paper. Names, villages, festivals, homecomings, artisans
+and generic fantasy are deliberately not excluded. Reconsider a rule if it
+causes repeated false positives; do not catalogue everything familiar.
 
 ## Format and implementation references
 

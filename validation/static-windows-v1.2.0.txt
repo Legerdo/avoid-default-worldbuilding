@@ -1,0 +1,53 @@
+Windows 11 / PowerShell / Python 3.13.0 / PyYAML 6.0.3
+
+Date: 2026-10-28 KST
+
+SKILL VERSION: 1.2.0
+
+> python tools/check.py
+PASS: repository structure, provenance IDs, case coverage, links and release inputs.
+NOT TESTED by this command: model behavior, host activation or cliché reduction.
+
+> python -m unittest discover -s tests -v
+test_case_schema_and_paired_coverage (test_repository.EvalSchemaTests.test_case_schema_and_paired_coverage) ... ok
+test_duplicate_case_is_detected (test_repository.EvalSchemaTests.test_duplicate_case_is_detected) ... ok
+test_invalid_category_is_detected (test_repository.EvalSchemaTests.test_invalid_category_is_detected) ... ok
+test_invalid_prior_turn_is_detected (test_repository.EvalSchemaTests.test_invalid_prior_turn_is_detected) ... ok
+test_missing_allowed_case_is_detected (test_repository.EvalSchemaTests.test_missing_allowed_case_is_detected) ... ok
+test_missing_blocked_case_is_detected (test_repository.EvalSchemaTests.test_missing_blocked_case_is_detected) ... ok
+test_missing_rubric_is_detected (test_repository.EvalSchemaTests.test_missing_rubric_is_detected) ... ok
+test_non_object_case_is_detected (test_repository.EvalSchemaTests.test_non_object_case_is_detected) ... ok
+test_only_evaluation_metadata_not_model_answers_is_present (test_repository.EvalSchemaTests.test_only_evaluation_metadata_not_model_answers_is_present) ... ok
+test_unknown_rule_is_detected (test_repository.EvalSchemaTests.test_unknown_rule_is_detected) ... ok
+test_bom_is_rejected (test_repository.RepositoryTests.test_bom_is_rejected) ... ok
+test_broken_local_link_is_rejected (test_repository.RepositoryTests.test_broken_local_link_is_rejected) ... ok
+test_dangerous_ci_event_is_rejected (test_repository.RepositoryTests.test_dangerous_ci_event_is_rejected) ... ok
+test_duplicate_frontmatter_key_is_rejected (test_repository.RepositoryTests.test_duplicate_frontmatter_key_is_rejected) ... ok
+test_duplicate_nested_metadata_key_is_rejected (test_repository.RepositoryTests.test_duplicate_nested_metadata_key_is_rejected) ... ok
+test_duplicate_rule_is_rejected (test_repository.RepositoryTests.test_duplicate_rule_is_rejected) ... ok
+test_empty_description_is_rejected (test_repository.RepositoryTests.test_empty_description_is_rejected) ... ok
+test_evidence_drift_is_rejected (test_repository.RepositoryTests.test_evidence_drift_is_rejected) ... ok
+test_license_mismatch_is_rejected (test_repository.RepositoryTests.test_license_mismatch_is_rejected) ... ok
+test_line_budget_is_enforced (test_repository.RepositoryTests.test_line_budget_is_enforced) ... ok
+test_manifest_duplicate_is_rejected (test_repository.RepositoryTests.test_manifest_duplicate_is_rejected) ... ok
+test_manifest_private_file_is_rejected (test_repository.RepositoryTests.test_manifest_private_file_is_rejected) ... ok
+test_manifest_traversal_is_rejected (test_repository.RepositoryTests.test_manifest_traversal_is_rejected) ... ok
+test_mutable_action_ref_is_rejected (test_repository.RepositoryTests.test_mutable_action_ref_is_rejected) ... ok
+test_overlong_description_is_rejected (test_repository.RepositoryTests.test_overlong_description_is_rejected) ... ok
+test_packages_are_reproducible_and_exclude_private_files (test_repository.RepositoryTests.test_packages_are_reproducible_and_exclude_private_files) ... ok
+test_packaging_refuses_invalid_source (test_repository.RepositoryTests.test_packaging_refuses_invalid_source) ... ok
+test_repository_is_valid (test_repository.RepositoryTests.test_repository_is_valid) ... ok
+test_source_archive_is_self_contained (test_repository.RepositoryTests.test_source_archive_is_self_contained) ... ok
+test_tool_permissions_cannot_sneak_in (test_repository.RepositoryTests.test_tool_permissions_cannot_sneak_in) ... ok
+test_unlabelled_evidence_is_rejected (test_repository.RepositoryTests.test_unlabelled_evidence_is_rejected) ... ok
+test_unquoted_version_type_is_rejected (test_repository.RepositoryTests.test_unquoted_version_type_is_rejected) ... ok
+test_version_requires_changelog_entry (test_repository.RepositoryTests.test_version_requires_changelog_entry) ... ok
+test_write_permission_is_rejected (test_repository.RepositoryTests.test_write_permission_is_rejected) ... ok
+test_wrong_name_is_rejected (test_repository.RepositoryTests.test_wrong_name_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 1.778s
+
+OK
+
+> python tools/package.py: PASS (archive checksum lines omitted: embedding them in a packaged log creates a circular digest).

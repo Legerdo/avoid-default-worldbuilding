@@ -3,7 +3,7 @@ name: avoid-default-worldbuilding
 description: Avoid stock worldbuilding when inventing or reviewing game concepts, story premises, settings, or lore (세계관, 컨셉, 클리셰 회피). Use for creative choices left open or a requested cliche review. Preserve explicit themes, approved canon, ordinary details, and output format. Do not change facts, translations, summaries, or code-only tasks.
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Avoid Default Worldbuilding
@@ -41,26 +41,36 @@ across languages, renamed jobs, and genre reskins, not isolated keywords.
 | WB06 | An extinct civilization's relics, scattered sacred fragments, or a sealed ancient power that must restore the world's lost balance. |
 | WB07 | Prophecy, a chosen bloodline, or predestined exceptional status that makes the hero the world's designated savior. |
 | WB08 | Portals, dimensional rifts, or doors between worlds used as an unexplained origin, central mystery, or catch-all resolution. |
+| WB09 | A return to a hometown where reviving an old festival or tradition conveniently reconciles entrenched community conflict without meaningful choices or consequences. |
 
 ## Apply with minimal changes
 
 1. Identify the fixed setting, characters, tone, mechanics, scope, and output format.
-   Permission for one pattern does not authorize the others.
-2. Check the central premise against WB01-WB08. When no unrequested pattern matches,
+   Permission for one pattern does not authorize the others. When inventing, begin
+   with the user's actual constraints and possible actions, not with the trope list.
+2. Check the causal premise and its resolution against WB01-WB09. When no unrequested pattern matches,
    keep the premise. In a review, leave suitable text unchanged unless the user
    requested other edits. Do not redesign it just to show a change.
 3. If a pattern matches and revision is requested, or the choice is yours, change
    only the causal setup, role, conflict, or solution needed to remove it. Preserve
    unaffected details and fixed constraints. Renaming a clockmaker as a "chronal
    engineer" does not change a time-repair plot.
-4. Give the replacement a concrete activity, constraint, relationship, or stake.
-   Keep it coherent and feasible. Do not add random oddities or replace every
-   rejected concept with the same new favorite occupation or genre.
+4. Make the replacement concrete and coherent, not arbitrarily strange. When
+   **inventing a playable game concept** with gameplay left open, connect a
+   distinctive setting feature to a player action, resource, or constraint that
+   affects play. For a story premise, connect a character's choice to a consequence.
+   Do not impose game mechanics on a request for atmosphere or lore only, invent
+   extra controls when mechanics are fixed, or replace every rejected idea with
+   the same new favorite occupation or genre.
 5. Keep incidental objects and ordinary functions: a background clock, a coastal
    landmark, a diary, a school library, a ruin, or a normal recollection is allowed.
-   A countdown, undo control, retry, respawn, or fast-travel mechanic alone is not
-   world lore. Do not invent prohibited lore to explain it.
-6. Check the revised premise and ending for another excluded pattern. Compare with
+   A hometown, festival, or reconciliation by itself is also allowed; WB09 concerns
+   their unrequested shortcut as a central plot. A countdown, undo control, retry,
+   respawn, or fast-travel mechanic alone is not world lore. Do not invent prohibited
+   lore to explain it.
+6. Check the revised causal chain and ending, not just names, for excluded patterns.
+   If the user requests multiple concepts, make their core actions and conflicts
+   meaningfully different rather than reskins. Compare the result with
    the fixed constraints to catch accidental changes. Do not introduce excluded
    lore later to explain a mechanic or resolve the story.
 
