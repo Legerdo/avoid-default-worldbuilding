@@ -1,0 +1,83 @@
+{
+  "record_type": "limited_behavioral_smoke",
+  "date": "2026-10-28",
+  "skill_version": "1.0.0",
+  "skill_sha256": "d48b921cfeb25d34ad2d0e2ef0718d4597a1e3a7771b92a1bc3d8e7503723d5c",
+  "cases_sha256": "6a850894488ffe99437367c42cd59ab7cd1da2bf9416a1eeebbc1a514608ec55",
+  "host": "Chat On Steroids ChatGPT workers",
+  "observed_model": "gpt-6",
+  "model_metadata_source": "connector agents spawn/status result",
+  "observed_reasoning_effort": "xhigh",
+  "model_snapshot": "unknown; connector label only",
+  "activation": "instruction injection; operational body reformatted, frontmatter not used",
+  "generation_context": "Apply this instruction-only skill to the prompts in your task. Do not browse, edit files, inspect other chats, or self-grade. Return exact generated answers, not reasoning.\n\nChoose a coherent premise without falling back on the patterns below. This is an editorial avoid-list, not a ranking of every model's most frequent outputs. It needs no scripts, API calls, external searches, or extra user questionnaires.\n\nBoundaries:\n- Apply only to creative choices the user has left open. Explicit requirements and established project canon take priority; change canon only when requested.\n- A genre, mood, or visual style does not authorize every trope associated with it. Conversely, preserve a requested mechanic even when its name resembles a trope.\n- An example to avoid, a quotation, or an unapproved draft is not user approval.\n- Do not alter translations, summaries, factual descriptions, or implementation-only work. For a critique, diagnose rather than rewrite unless rewriting was requested.\n\nDefault exclusions:\nExclude these from an unrequested central premise: the protagonist's defining role, the world's causal rule, the main conflict, or its resolution. Match meaning across languages, renamed jobs, and genre reskins, not isolated keywords.\nWB01: Clock/watchmaker lead; a world repaired through clocks, stopped time, time loops, or rewinding history.\nWB02: A lonely lighthouse/beacon keeper protecting an old secret; the same setup moved to a tower or space station.\nWB03: Amnesia or collecting, trading, restoring, or erasing memories as the route to the protagonist's identity or the world's truth.\nWB04: A librarian/archivist lead or a magical library, forbidden book, or archive that contains or rewrites the world's hidden truth.\nWB05: Collecting or repairing dreams, a dream world, or a collapsing dream/reality boundary as the premise or final explanation.\nWB06: An extinct civilization's relics, scattered sacred fragments, or a sealed ancient power that must restore the world's lost balance.\nWB07: Prophecy, a chosen bloodline, or predestined exceptional status that makes the hero the world's designated savior.\nWB08: Portals, dimensional rifts, or doors between worlds used as an unexplained origin, central mystery, or catch-all resolution.\n\nApply without overblocking:\n1. Keep the user's constraints, requested genre/mechanics, and established canon. Permission for one pattern is narrow: it does not authorize the other patterns.\n2. Check the proposed premise once against WB01-WB08. If it matches without that permission, replace its causal setup, role, conflict, or solution. Renaming a clockmaker as a \"chronal engineer\" is not a replacement.\n3. Build the replacement around a concrete activity, constraint, relationship, or stake. Keep it understandable and feasible. Do not add arbitrary weirdness or repeatedly substitute one new favorite occupation or genre.\n4. Keep incidental objects and ordinary functions: a background clock, a coastal landmark, a diary, a school library, a ruin, or a normal recollection is allowed. A countdown, undo control, retry, respawn, or fast-travel mechanic alone is not world lore. Do not invent prohibited lore to explain it.\n5. Recheck the final premise, including its twist and ending. Do not add an excluded explanation late in implementation. Do not expand the user's requested output.\n\nDo not ban all fantasy, mystery, magic, villages, artisans, or familiar names. Do not reject the task or demand a new concept when the user deliberately requests an excluded pattern. Use it, keeping any other explicit exclusions intact.\n\nOutput:\nReturn the requested artifact, in the user's language and format. Keep this checklist and discarded candidates out of the default answer. On a requested review, give the matched rule and a brief, concrete reason; offer a rewrite only when requested. Do not claim that passing this check proves originality.",
+  "task_preamble": "Generate a separate answer for each prompt below. Return one JSON object mapping the exact case IDs to answer strings. Do not include any verdict or explanation about the test. Use agents finish to deliver the object in RESULT. These are batched generation samples, not a request to evaluate a skill.",
+  "batches": [
+    [
+      "G01",
+      "E06",
+      "E04"
+    ],
+    [
+      "N01",
+      "E01",
+      "E03"
+    ]
+  ],
+  "reviewer": "main assistant, separate from generation workers; manual semantic review",
+  "human_reviewed": false,
+  "blind_review": false,
+  "native_activation_tested": false,
+  "comparative_baseline": false,
+  "limitations": [
+    "Six samples in two batched worker conversations; not 29 independent regression runs.",
+    "All generations use one connector-reported model family; Claude and Gemini were not exercised.",
+    "Reformatted operational body, not native discovery or byte-exact SKILL.md activation.",
+    "AI reviewer, not a human or blinded rater. No frequency-reduction or originality claim.",
+    "No game was implemented or play-tested."
+  ],
+  "records": [
+    {
+      "case_id": "G01",
+      "prompt": "2D 퍼즐 게임 콘셉트 하나를 3문장으로 만들어. 이동과 밀기만 조작하고 10분 안에 끝나야 해. 세계관은 자율로 정해.",
+      "output": "폭우 직전의 옥상 텃밭에서 작은 배송 로봇이 빗물받이 상자를 제자리에 놓는 2D 격자 퍼즐이다. 플레이어는 이동과 밀기만으로 상자를 배치해 물길을 연결하며, 한 번 밀어 넣으면 되돌릴 수 없는 경사면 때문에 순서를 계산해야 한다. 6개의 짧은 스테이지를 모두 풀면 텃밭에 빗물이 퍼지며, 전체 플레이 시간은 10분 이내다.",
+      "verdict": "PASS",
+      "review_notes": "Three sentences; rooftop water-routing puzzle uses movement and pushing; no excluded central premise. Ten-minute scope is a stated concept constraint, not a measured play time."
+    },
+    {
+      "case_id": "E06",
+      "prompt": "시간루프는 반드시 넣어. 나머지 설정은 자율이고 기억 상실·꿈·예언된 영웅은 싫어. 게임 콘셉트 하나를 만들어.",
+      "output": "《막차 전 4분》은 지하 시장에 급류가 밀려들기 4분 전으로 계속 돌아가는 시간루프 퍼즐 게임이다. 플레이어는 배수구와 수문을 조작하며, 이전 루프에서 했던 자신의 행동이 다음 루프에 그대로 재생되는 성질을 이용해 여러 장치를 동시에 움직인다. 상인들이 대피할 통로를 확보하고 물길을 다른 곳으로 돌리면 시간루프가 끝난다.",
+      "verdict": "PASS",
+      "review_notes": "Explicit time loop remains. No amnesia, dream or chosen-hero framing is added. The title is not evidence of game quality."
+    },
+    {
+      "case_id": "E04",
+      "prompt": "초안: 별빛 신호탑의 마지막 관리자가 외딴 우주정거장에서 금단의 비밀을 지킨다. 상투적인 중심 구조를 고쳐 게임 콘셉트 하나로 바꿔 줘.",
+      "output": "《신호 과부하》의 별빛 신호탑은 외딴 정거장의 비밀 시설이 아니라 수백 척의 선박이 이용하는 우주항의 공동 관제망이다. 플레이어는 세 교대 관제팀을 번갈아 지휘하며 제한된 송신 채널을 배분해 구조선·화물선·여객선의 충돌을 막는 실시간 퍼즐을 푼다. 항만 조합과 운송 기업이 항로 우선권을 놓고 대립하는 상황에서 지연 비용과 안전을 함께 관리해 모든 선박을 귀항시키는 것이 목표다.",
+      "verdict": "PASS",
+      "review_notes": "Changes solitary secret-keeping into team-based public traffic control and resource allocation. A signal tower remains as an ordinary facility, which is allowed."
+    },
+    {
+      "case_id": "N01",
+      "prompt": "Translate exactly into Korean: \"The lighthouse keeper repairs clocks and collects memories in a dream library.\"",
+      "output": "등대지기는 꿈속 도서관에서 시계를 수리하고 기억을 수집한다.",
+      "verdict": "PASS",
+      "review_notes": "All four source motifs remain in translation; no policy lecture or creative substitution."
+    },
+    {
+      "case_id": "E01",
+      "prompt": "해안 마을의 평범한 학교 도서관에서 의자를 배치하는 게임이다. 창밖에 등대와 옛 성터가 보이고 벽시계와 일기가 소품이다. 이 설정을 유지하고 2줄 소개문을 써 줘.",
+      "output": "해안 마을의 평범한 학교 도서관에서 의자를 배치해 학생들에게 알맞은 자리를 만들어 보세요.\n창밖으로 등대와 옛 성터가 보이고, 벽시계와 일기가 소품으로 놓여 있습니다.",
+      "verdict": "PASS",
+      "review_notes": "Keeps library/chairs and every named background detail in exactly two lines; no magical explanation added."
+    },
+    {
+      "case_id": "E03",
+      "prompt": "초안: 시계공 대신 크로노 엔지니어가 멈춘 도시의 시간을 복구한다. 같은 클리셰인지 한 문장으로 판정만 해 줘.",
+      "output": "네, 직업명만 크로노 엔지니어로 바뀌었을 뿐 멈춘 도시의 시간을 복구한다는 핵심 구조가 같아 WB01에 해당합니다.",
+      "verdict": "PASS",
+      "review_notes": "Identifies renamed time-repair as WB01 in one sentence; does not supply an unsolicited rewrite."
+    }
+  ]
+}

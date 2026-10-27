@@ -1,0 +1,25 @@
+# Reviewed public source allowlist. One POSIX-style relative path per line.
+.gitattributes
+.gitignore
+.github/ISSUE_TEMPLATE/behavior.yml
+.github/pull_request_template.md
+.github/workflows/ci.yml
+AGENTS.md
+CHANGELOG.md
+CONTRIBUTING.md
+LICENSE
+README.md
+VALIDATION.md
+requirements-dev.txt
+release-files.txt
+skills/avoid-default-worldbuilding/SKILL.md
+skills/avoid-default-worldbuilding/LICENSE
+skills/avoid-default-worldbuilding/references/EVIDENCE.md
+evals/README.md
+evals/cases.json
+tools/check.py
+tools/package.py
+tests/test_repository.py
+evals/observations/smoke-2026-10-28.json
+validation/static-linux.txt
+validation/official-windows.txt

@@ -1,0 +1,19 @@
+Official Agent Skills validator execution record (paths sanitized)
+Date: 2026-10-28 KST
+Reference repository: https://github.com/agentskills/agentskills
+Reference commit: 69ef37e9424c0a7ea9dd2293b559e43ec8176379
+
+Attempt 1: uvx default interpreter / locale
+Result: FAIL before validation completed.
+  File "skills_ref/validator.py", line 172, in validate
+    content = skill_md.read_text()
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 157: illegal multibyte sequence
+The initial uvx environment selected a cached Python 3.12 interpreter.
+
+Attempt 2: existing Windows Python 3.13.0 with session-local PYTHONUTF8=1
+SKILL_SHA256=D48B921CFEB25D34AD2D0E2EF0718D4597A1E3A7771B92A1BC3D8E7503723D5C
+Valid skill: C:\...\avoid-default-worldbuilding
+Exit code: 0
+No SKILL.md or validator-source changes between attempts.
+The verification directory contained the exact SKILL.md only. This checker
+validates the skill format, not installed-host behavior or the other package files.

@@ -1,0 +1,29 @@
+name: Missed pattern or false positive
+description: Report a concrete unwanted or overblocked worldbuilding choice.
+title: "[behavior] "
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Skill version, host, model identifier if observable, date, activation method.
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Exact prompt and relevant canon
+      description: Remove private data. Distinguish requested themes from examples to avoid.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Unedited output and expected behavior
+      description: Include a narrow counterexample that must remain allowed. Do not submit credentials.
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: Related WB rule and source, if any
